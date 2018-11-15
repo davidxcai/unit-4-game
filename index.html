@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>The Chaos Emeralds</title>
 
     <link rel="stylesheet" href="assets/css/reset.css">
 
@@ -25,84 +25,90 @@
 
             <!--header title-->
             <div class="row mt-5">
-                <div class="col-md-12">
-                    <p style="text-align: center">Chaos Emerald Collector</p>
+                <div class="col-md-12" id="header">
+                    <p>Chaos Emeralds Collector</p>
                 </div>
             </div>
         </h1>
 
         <!--contains the instructions-->
         <div id="instructions">
-            <p>Eggman will think of a number. The goal is to click the Chaos Emeralds which contain hidden numbers and
+            <p class="text">Eggman will think of a number. The goal is to click the Chaos Emeralds which contain hidden
+                numbers and
                 match the number Eggman thought of.</p>
 
-            <p>If you go over the number, the Chaos Emeralds will shatter and Eggman will win.</p>
+            <p class="text">If you go over the number, the Chaos Emeralds will shatter and Eggman will win.</p>
 
-            <p>Be careful, Sonic.</p>
+            <p class="text">Be careful, Sanic.</p>
+        </div>
+
+        <div class="images">
+            <div class="row">
+                <div class="col-md-4 mt-5">
+                    <img src="assets/images/sanic.png">
+                </div>
+                <div class="col-md-4 offset-4">
+                    <img src="assets/images/eggman.png">
+                </div>
+            </div>
         </div>
 
         <!--Eggman's card containing the number he thought of-->
         <div id="eggmanNum">
-            <div class="row mt-5 mb-5">
-                <div class="col-md-4 offset-4">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/images/eggman.png" alt="Dr. Eggman">
+            <div class="row mt-5 mb-5 ml-5">
+                <div class="col-md-4">
+                    <div class="card bg-dark" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center">Eggman's Number</h5>
-                            <h1 id="eggNum" style="text-align: center"></h1>
+                            <h5 class="card-title">Your Number</h5>
+                            <h1 id="yourNum"></h1>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-3">
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <div class="card-body">
+                            <h3 class="card-title">Score</h3>
+                            <h4>Wins:
+                                <span id="wins"></span>
+                            </h4>
+                            <h4>Losses:
+                                <span id="losses"></span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 offset-1">
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Eggman's Number</h5>
+                            <h1 id="eggNum"></h1>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <!--The four clickable buttons with pictures of emeralds-->
         <div class="crystals">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-md-3">
-                    <img src="./assets/images/emerald1.png" alt="emerald1" class="emerald1" value="1">
+                    <img src="./assets/images/emerald1.png" alt="emerald1" class="emeralds" id="emerald1" value="1">
                 </div>
                 <div class="col-md-3">
-                    <img src="./assets/images/emerald2.png" alt="emerald2" class="emerald2" value="2">
+                    <img src="./assets/images/emerald2.png" alt="emerald2" class="emeralds" id="emerald2" value="2">
                 </div>
                 <div class="col-md-3">
-                    <img src="./assets/images/emerald3.png" alt="emerald3" class="emerald3" value="3">
+                    <img src="./assets/images/emerald3.png" alt="emerald3" class="emeralds" id="emerald3" value="3">
                 </div>
                 <div class="col-md-3">
-                    <img src="./assets/images/emerald4.png" alt="emerald4" class="emerald4" value="4">
+                    <img src="./assets/images/emerald4.png" alt="emerald4" class="emeralds" id="emerald4" value="4">
                 </div>
             </div>
         </div>
 
-        <!--card container user's score-->
-        <div id="userNum">
-            <div class="row mt-5 mb-5">
-                <div class="col-md-4 offset-4">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/images/sanic.png" alt="Sanic">
-                        <div class="card-body">
-                            <h5 class="card-title" style="text-align: center">Your Number</h5>
-                            <h1 id="yourNum" style="text-align: center"></h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!--card containing the score-->
-                <div class="col-md-3 offset-1">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h3 class="card-title" style="text-align: center">Score</h3>
-                            <p>Wins:
-                                <span id="wins"></span>
-                            </p>
-                            <p>Losses:
-                                <span id="losses"></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <script src="assets/javascript/game.js"></script>
 </body>

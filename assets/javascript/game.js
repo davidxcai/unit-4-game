@@ -47,7 +47,7 @@ function updateTotal(e) {
 
 $(document).ready(function () {
     emeraldValue();
-
+    $("#yourNum").html(0);
     //decides if the game is won yet
     function gameState() {
         if (compareNum === eggmanNum) {
@@ -80,7 +80,7 @@ $(document).ready(function () {
     console.log("current array" + totalNum);
 
     //Emerald 1
-    $(".emerald1").on("click", function () {
+    $("#emerald1").on("click", function () {
         totalNum.push(crystalNum[0]);
         compareNum += crystalNum[0];
         updateTotal();
@@ -89,7 +89,7 @@ $(document).ready(function () {
     })
 
     //Emerald 2
-    $(".emerald2").on("click", function () {
+    $("#emerald2").on("click", function () {
         totalNum.push(crystalNum[1]);
         compareNum += crystalNum[1];
         updateTotal();
@@ -98,7 +98,7 @@ $(document).ready(function () {
     })
 
     //Emerald 3
-    $(".emerald3").on("click", function () {
+    $("#emerald3").on("click", function () {
         totalNum.push(crystalNum[2]);
         compareNum += crystalNum[2];
         updateTotal();
@@ -107,7 +107,7 @@ $(document).ready(function () {
     })
 
     //Emerald 4
-    $(".emerald4").on("click", function () {
+    $("#emerald4").on("click", function () {
         totalNum.push(crystalNum[3]);
         compareNum += crystalNum[3];
         updateTotal();
