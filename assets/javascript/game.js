@@ -14,11 +14,11 @@ var totalNum = [];
 var compareNum = 0;
 
 //eggman random number
-var eggmanNum = Math.floor(Math.random() * 120) + 19;
+var eggmanNum = Math.floor(Math.random() * 102) + 19;
 
 //creates a new random number
 function newNum() {
-    eggmanNum = Math.floor(Math.random() * 120) + 19;
+    eggmanNum = Math.floor(Math.random() * 102) + 19;
     $("#eggNum").html(eggmanNum);
     $("#yourNum").html(compareNum);
 }
